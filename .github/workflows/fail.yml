@@ -1,0 +1,14 @@
+name: Failing check
+
+on:
+    pull_request:
+
+jobs:
+    check:
+        name: Delay
+        runs-on: ubuntu-latest
+        steps:
+            -   name: delay
+                run: sleep 60
+            -   name: fail
+                run: exit 1
