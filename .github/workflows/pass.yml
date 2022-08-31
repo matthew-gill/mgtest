@@ -4,6 +4,9 @@ on:
     pull_request:
 
 jobs:
-      params:
-          name: Make environment variables available to the rest of the workflow
-          runs-on: ubuntu-latest
+    check:
+        name: Delay
+        runs-on: ubuntu-latest
+        steps:
+            -   name: delay
+                run: sleep 60

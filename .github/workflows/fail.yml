@@ -4,11 +4,11 @@ on:
     pull_request:
 
 jobs:
-    params:
+    check:
         name: Delay
         runs-on: ubuntu-latest
-    steps:
-        -   name: delay
-            run: sleep 60
-        -   name: fail
-            run: exit 1
+        steps:
+            -   name: delay
+                run: sleep 60
+            -   name: fail
+                run: exit 1
