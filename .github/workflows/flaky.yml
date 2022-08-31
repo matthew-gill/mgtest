@@ -1,0 +1,14 @@
+name: Flaky check
+
+on:
+    pull_request:
+
+jobs:
+    params:
+        name: Delay
+        runs-on: ubuntu-latest
+    steps:
+        -   name: delay
+            run: sleep 60
+        -   name: fail
+            run: (( RANDOM%2 == 0 )) && exit 0 || exit 1

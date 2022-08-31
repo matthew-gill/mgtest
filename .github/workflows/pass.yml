@@ -1,0 +1,9 @@
+name: Passing check
+
+on:
+    pull_request:
+
+jobs:
+      params:
+          name: Make environment variables available to the rest of the workflow
+          runs-on: ubuntu-latest
